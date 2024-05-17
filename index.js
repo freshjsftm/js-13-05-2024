@@ -1,58 +1,43 @@
-console.log('hi!');
+// const number1 = prompt('enter first number', 5);
+// const number2 = prompt('enter second number', 3);
+// console.log(' number1 = ', number1, typeof number1);
+// console.log(' number2 = ', number2, typeof number2);
 
-//створіть змінну, яка буде зберігати кількість днів у тижні
-//виведіть цю змінну в консоль
+// // + - concatenation
+// const summa1 = number1 + number2; //53 - склеєні рядки
+// alert('summa1 = ' + summa1);
 
-const amountDaysInWeek = 7;
-const days_in_week = 7;
-const allDayWeek = 7;
-console.log(allDayWeek);
+// const summa2 = +number1 + +number2; //8
+// alert('summa2 = ' + summa2);
 
-// створіть змінну, яка містить булеве значення чи є ви працівником
-const isWork = false;
+// // Number() - приводить до типу число (number)
+// const summa3 = Number(number1) + Number(number2); //8
+// alert('summa3 = ' + summa3);
 
-// створіть змінну, яка зберігає зріст в метрах 1.55
-const myHeight = 1.84;
-console.log(myHeight);
+// const substruct = Number(number1) - Number(number2); //2
+// alert(substruct);
 
-// створіть змінну, яка говорить про те чи є у вас автомобіль
-const isCar = true;
+// користувач послідовно вводить назву продукта і його ціну
+// так треба ввести інформацію про мінімум 2 продукта
+// вивести чек у вигляді, використовуючи один alert
+/*
+Ви купили:
+молоко - 45грн
+хліб - 23грн
+------
+до сплати - 68грн
+*/
 
+const productName1 = prompt('Enter name first product');
+const productPrice1 = prompt('Enter price ' + productName1);
+const productName2 = prompt('Enter name second product');
+const productPrice2 = prompt('Enter price ' + productName2);
 
+const totalPrice = Number(productPrice1) + Number(productPrice2);
 
+const productInfo1 = productName1 + ' - ' + productPrice1 + 'грн\n';
+const productInfo2 = productName2 + ' - ' + productPrice2 + 'грн\n';
+const totalInfo = '-------\nдо сплати - ' + totalPrice + 'грн\n';
 
+alert('Ви купили:\n' + productInfo1+productInfo2+totalInfo);
 
-
-
-
-let titleMovie = 'Titanic';
-console.log(titleMovie);
-titleMovie = 'Titanic2';
-
-//створіть змінну для вашої домашньої тварини і запишіть в змінну що це за тварина я або null
-let myAnimal;
-myAnimal = 'cat';
-console.log(myAnimal);
-
-let firstName = 'Olena';
-console.log(firstName);
-
-let isAdult = true;
-let isWeekend = false;
-
-//створіть змінну яка буде містити булеве значення про те чи є ви студентом
-let isStudent = false;
-
-let yearOfBirth = 1900;
-console.log(yearOfBirth);
-yearOfBirth = 1978;
-console.log(yearOfBirth);
-
-// створіть змінну для зберігання вашого улюбленого кольору
-let colorFavorite = 'pink';
-console.log(firstName, colorFavorite);
-
-let age;
-console.log(age);
-age = 45;
-console.log(age);
