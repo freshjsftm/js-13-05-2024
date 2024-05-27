@@ -1,21 +1,21 @@
-// remainder  %
+// false
+// undefined
+console.log(Boolean(undefined)); //false
+// null
+console.log(Boolean(null)); //false
+// ''  ""  ``
+console.log(Boolean('')); //false
+// 0  +0  -0
+console.log(Boolean(0)); //false
+// NaN  - помилка обчислення
+console.log(Boolean(NaN)); //false
 
-const number = 654;
-const remainder = number % 2;
-if (remainder === 0) {
-  console.log('парне', 'even');
-} else {
-  console.log('непарне', 'odd');
-}
 
-// кратне - ділиться без остачі
-// number чи кратне 7
+// ! NOT  інверсія
+console.log(!true); //false
+console.log(!false); //true
 
-const number7 = 654;
-const remainder7 = number % 7;
-if (remainder7 === 0) {
-  console.log('кратне 7', 'multiply 7');
-} else {
-  console.log('не кратне 7', 'not multiply 7');
-}
+const str = '';
+console.log(!str); //true  !false
 
+console.log(!undefined); // !false -> true
