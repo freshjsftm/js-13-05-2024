@@ -1,15 +1,21 @@
-// const userName = prompt("Введіть ваше ім'я");
-// const isUserName = confirm("Це ваше ім'я - " + userName + '?');
+// remainder  %
 
-// if (isUserName) {
-//   alert('Hi, ' + userName + '!!!');
-// } else {
-//   alert('Наступного разу будьте уважніше!');
-// }
+const number = 654;
+const remainder = number % 2;
+if (remainder === 0) {
+  console.log('парне', 'even');
+} else {
+  console.log('непарне', 'odd');
+}
 
+// кратне - ділиться без остачі
+// number чи кратне 7
 
-// запитати у користувача що він хоче оримати на день народження
-// запитати підтвердження чи не передумав він отримати введений подарунок
-// якщо користувач підтвердив - виводимо Добре, пішов шукати твій подарунок ...
-// якщо користувач не підтвердив - виводимо Добре, подумай ще
+const number7 = 654;
+const remainder7 = number % 7;
+if (remainder7 === 0) {
+  console.log('кратне 7', 'multiply 7');
+} else {
+  console.log('не кратне 7', 'not multiply 7');
+}
 
