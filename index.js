@@ -1,20 +1,46 @@
-const userInput = prompt('Enter hour');
-const userNumber = Number(userInput); //NaN
+const message = `Введи мову, якою хочеш спілкуватися:
+українська - ua
+англійська - en
+польска - pl
+іспанська - es
+французька - fr
+`;
 
-// перша помилка - користувач натиснув відміну
-const error1 = userInput === null;
-// друга помилка - користувач надіслав порожній рядок
-const error2 = userInput === '';
-// третя помилка - користувач замість цифр ввів літери
-const error3 = Number.isNaN(userNumber);
+const lang = prompt(message);
 
-if (error1 || error2 || error3) {
-  alert('Error.\n' + userInput + ' - not a number!!!');
-} else {
-  if (userNumber >= 0 && userNumber <= 23) {
-    alert('thanks');
-    //
-  } else {
-    alert('Error.\n' + userInput + ' - not a hour!!!');
-  }
+switch (lang) {
+  case 'ua':
+    alert('привіт');
+    break;
+  case 'en':
+    alert('hi');
+    break;
+  case 'pl':
+    alert('cześć');
+    break; 
+  case 'es':
+    alert('hola');
+    break;
+  case 'fr':
+    alert('bonjour');
+    break;         
+  default:
+    alert('мова не підтримується');
+    break;
 }
+
+
+
+// if (lang === 'ua') {
+//   alert('привіт');
+// } else if (lang === 'en') {
+//   alert('hi');
+// } else if (lang === 'pl') {
+//   alert('cześć');
+// } else if (lang === 'es') {
+//   alert('hola');
+// } else if (lang === 'fr') {
+//   alert('bonjour');
+// } else {
+//   alert('мова не підтримується');
+// }
