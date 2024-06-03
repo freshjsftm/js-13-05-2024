@@ -1,12 +1,36 @@
-switch (confirm('ви хочете покинути сайт?')) {
-  case true:
-    alert('до побачення');
+const userInput1 = prompt('Enter first number ');
+const userInput2 = prompt('Enter second number ');
+const number1 = Number(userInput1);
+const number2 = Number(userInput2);
+const operator = prompt('Enter operator: +, -, *, /, %  ');
+
+switch (operator) {
+  case '+': {
+    const result = number1 + number2;
+    alert(number1 + '+' + number2 + '=' + result);
     break;
-  case false:
-    alert('ми раді, що ви лишаєтесь з нами');
+  }
+  case '-': {
+    const result = number1 - number2;
+    alert(number1 + '-' + number2 + '=' + result);
+    break;
+  }
+  case '*': {
+    const result = number1 * number2;
+    alert(number1 + '*' + number2 + '=' + result);
+    break;
+  }
+  case '/': {
+    const result = number1 / number2;
+    alert(number1 + '/' + number2 + '=' + result);
+    break;
+  }
+  case '%': {
+    const result = number1 % number2;
+    alert(number1 + '%' + number2 + '=' + result);
+    break;
+  }
+  default:
+    alert('operator not exists');
     break;
 }
-
-confirm('ви хочете покинути сайт?')
-  ? alert('до побачення')
-  : alert('ми раді, що ви лишаєтесь з нами');
