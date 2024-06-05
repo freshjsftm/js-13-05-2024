@@ -1,13 +1,19 @@
+const secretNumber = 4;
+//якщо введене число більше - секретне менше
+//якщо введене число менше - секретне більше
 
-let amountPlate = 0;
-const totalAmountPlate = 5;
+while (true) {
+  const userInput = prompt('enter number');  //qwerty
+  const userNumber = Number(userInput);      //NaN   ->   Number.isNaN(NaN)
 
-// while (amountPlate>0) {
-//   console.log('washing plate ', amountPlate);
-//   amountPlate--; //decrement
-// }
-
-while (amountPlate < totalAmountPlate) {
-  amountPlate++;
-  console.log('washing plate ', amountPlate);
+  if (userInput.trim() === '' || userInput === null || Number.isNaN(userNumber)) {
+    alert('error! enter number');
+  } else if (userNumber === secretNumber) {
+    alert('you win!');
+    break;
+  } else if (userNumber > secretNumber) {
+    alert('secret number less');
+  } else {
+    alert('secret number bigger');
+  }
 }
