@@ -5,11 +5,12 @@ const secretNumber = 17;
 for (let i = start; i < end; i++) {
   if(i === secretNumber){
     continue;
+    alert('after continue'); //цей рядок не виконається!!!
   }
   console.log(i);
 }
 
-debugger
+// debugger
 while(true){
   const userInput =  prompt('Enter number');
   if(userInput === null){
