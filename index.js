@@ -1,19 +1,14 @@
-const number1 = 2;
-const number2 = 7;
-const result = number1 * number2;
+// `${number1} * ${number2} = ${number1 * number2}`
 
+// const number = 7;
+// for(let i = 1; i<=10; i++){
+//   console.log(`${number} * ${i} = ${number*i}`);
+// }
 
-while (true) {
-  const userInput = prompt(`скільки буде 
-  ${number1} * ${number2} 
-  ?`);
-  if (userInput === null || userInput.trim()==='') {
-    alert('будь уважний!');
-    continue;
+for (let num1 = 1; num1 <= 10; num1++) {
+  console.group(num1);
+  for (let num2 = 1; num2 <= 10; num2++) {
+    console.log(`${num1} * ${num2} = ${num1*num2}`);
   }
-  if (Number(userInput) === result) {
-    alert('Win! відповідь = ' + result);
-    break;
-  }
-  alert('Спробуй ще!');
+  console.groupEnd();
 }
