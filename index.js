@@ -1,17 +1,18 @@
-function logMessage(message) {
-  console.log(message);
+
+/**
+ * draw multiple times thing
+ * @param {number} times default value 1
+ * @param {string} thing default value ':)'
+ */
+function drawThings(times=1, thing=':)') {
+  for (let i = 1; i <= times; i++) {
+    console.log(i, thing);
+  }
 }
-logMessage(123);
-logMessage('Message from code');
 
 
-function logForUser(userName, word) {
-  console.log(`${word}, ${userName}!`);
-}
 
-logForUser('Hi', 'Bill'); 
-logForUser('Tom', 'Ciao'); 
-logForUser('Anna', 'Halo'); 
-
-//порядок створення параметрів в функції повинен збігатися з порядком передачі аргументів в функцію
-
+drawThings(2, '|^|^|');
+drawThings(5);
+drawThings(undefined,'=^.^=');
+drawThings();
