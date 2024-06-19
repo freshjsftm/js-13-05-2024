@@ -1,46 +1,37 @@
-/**
- *
- * @param {number} number1
- * @param {number} number2
- * @returns {number}
- */
-function addTwoNumbers(number1 = 0, number2 = 0) {
-  const summa = number1 + number2;
-  return summa;
+// object
+
+const user1 = {
+  firstName:'Brad',
+  lastName:'Pitt',
+  age: 32,
+  isMale: true,
 }
 
-const result = addTwoNumbers(7, 2);
-console.log(result);
+// console.log(user1);
+// console.log(user1.firstName, user1.age);
 
-console.log(addTwoNumbers(4, 9));
+// створити об'єкт book з властивостями title, author, yearCreate, isReading
 
-console.log(addTwoNumbers());
+// const object = new Object({key:12})
+// console.log(object);
 
-//написати функцію, яка приймає в якості параметра сторону квадарата і повертає розраховану площу
-
-/**
- * розраховує площу квадрата
- * @param {number} side
- * @returns {number}
- */
-function getAreaSquare(side) {
-  const area = side * side;
-  return area;
+const book = {
+  title: 'It',
+  author: 'Stiven King',
+  yearCreate: 1982,
+  isReading: false,
+  getInfo(){
+    return `${this.author} "${this.title}", ${this.yearCreate}`
+  },
+  "two words": 'value two words'
 }
 
-// написати функцію, яка приймає два числа - початок і кінець діапазону (старт включно, кінець НЕ включно) і повертає функція сумму усіх чисел цього діапазону
-/**
- *
- * @param {number} start
- * @param {number} end
- * @returns {number}
- */
-function summaDiapazonNumbers(start, end) {
-  let summa = 0;
-  for (let i = start; i < end; i++) {
-    summa += i;
-  }
-  return summa;
-}
-console.log(summaDiapazonNumbers(1, 6));
-
+console.log(book.getInfo());
+book["two words"] = 123123;
+console.log(book["two words"]);
+console.log(book["isReading"]);
+console.log(book["title"]);
+//add new property
+book.pages = 845;
+//delete property
+delete book.pages;
