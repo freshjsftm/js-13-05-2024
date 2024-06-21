@@ -1,37 +1,43 @@
-// object
-
-const user1 = {
-  firstName:'Brad',
-  lastName:'Pitt',
-  age: 32,
-  isMale: true,
+// constructor
+/**
+ * 
+ * @param {string} name 
+ * @param {number} age 
+ */
+function User(name, age){
+  this.name = name;
+  this.age = age;
+  this.getInfo = function(){
+    return `${this.name} is ${this.age} years old`
+  }
 }
 
-// console.log(user1);
-// console.log(user1.firstName, user1.age);
+// instance
+const user1 = new User('Fred', 12);
+// console.log(user1.getInfo());
+const user2 = new User('Anna', 15);
+// console.log(user2.getInfo());
 
-// створити об'єкт book з властивостями title, author, yearCreate, isReading
+// створити функцію конструктор Phone 
+// properties: brand, model, price
+// method: getDetails 'brand model costs $price'
+// створити інстанс 
+// викликати метод в консолі
 
-// const object = new Object({key:12})
-// console.log(object);
 
-const book = {
-  title: 'It',
-  author: 'Stiven King',
-  yearCreate: 1982,
-  isReading: false,
-  getInfo(){
-    return `${this.author} "${this.title}", ${this.yearCreate}`
-  },
-  "two words": 'value two words'
+
+function Phone (brand, model, price){
+  this.brand = brand;
+  this.price = price;
+  this.model = model;
+  this.getDeteils = function(){
+      return `${this.brand}, ${this.model}, ${this.price}`;
+  }
 }
 
-console.log(book.getInfo());
-book["two words"] = 123123;
-console.log(book["two words"]);
-console.log(book["isReading"]);
-console.log(book["title"]);
-//add new property
-book.pages = 845;
-//delete property
-delete book.pages;
+// debugger
+const phone1 = new Phone('Google','mm',51000);
+console.log(phone1.getDeteils());
+
+const phone2 = new Phone('Sony','xp', 16000);
+console.log(phone2.getDeteils());
