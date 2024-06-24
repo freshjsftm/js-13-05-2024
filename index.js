@@ -1,25 +1,21 @@
-function User(name, age, isMale) {
-  this.name = name;
-  this.age = age;
-  this.isMale = isMale;
+const user = {
+  name: 'Bred',
 }
-function UserPrototype(){
-  this.getName = function() {
-    return this.name;
-  }
-  this.getInfo = function() {
-    return `${this.name} is ${this.age} years old`;
-  }
-  this.getGender = function() {
-    return this.isMale ? 'male' : 'female';
-  }
-}
-//статична властивість
-User.prototype = new UserPrototype();
 
-const user1 = new User('Alex', 20, true);
-console.log(user1);
-console.log(user1.getInfo());
-console.log(user1.getGender());
-console.log(user1.getName());
+const userProto = {
+  say(){
+    return `my name is ${this.name}`
+  },
+  walk(){
+    return 'i am walking';
+  }
+}
+
+user.__proto__ = userProto;
+
+
+console.log(user);
+console.log(user.say());
+console.log(user.walk());
+
 
