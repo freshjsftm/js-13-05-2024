@@ -1,21 +1,14 @@
-const user = {
-  name: 'Bred',
-}
+const array1 = [3];
+console.log(array1);
 
-const userProto = {
-  say(){
-    return `my name is ${this.name}`
-  },
-  walk(){
-    return 'i am walking';
-  }
-}
+// одне число в Array - буде позначати довжину масива з попрожніми комірчинками
+const array2 = new Array(3);
+console.log(array2);
 
-user.__proto__ = userProto;
+const array3 = new Array(3,4);
+console.log(array3);
 
+// створити масив значеннями якого будуть імена 3 ваших друзів
 
-console.log(user);
-console.log(user.say());
-console.log(user.walk());
-
-
+const names = ['Neo','Alex','Bred'];
+console.log(names.length);
