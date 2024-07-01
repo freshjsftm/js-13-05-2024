@@ -1,20 +1,23 @@
-logWord1('test before');
-// function declaration
-function logWord1(word){
-  console.log(word);
+const site = {
+  title:'my site',
+  headers:['qwe1','qwe2','qwe3'],
+  showHeaders(){
+    this.headers.forEach(function(elem){
+      console.log(elem);
+    })
+  },
+    showHeadersAndTitle(){
+    this.headers.forEach((elem)=>{
+      console.log(elem, this.title);
+    })
+  },
+  showHeadersAndTitle2(){
+    this.headers.forEach(function(elem){
+      console.log(elem, this.title);
+    })
+  },
 }
-logWord1('test');
 
-
-// function expression
-const logWord2 = function (word){
-  console.log(word);
-}
-logWord2('new text');
-
-
-// arrow function
-const logWord3 = (word) => {
-  return 12;
-}
-logWord3('qwerty');
+site.showHeaders()
+site.showHeadersAndTitle()
+site.showHeadersAndTitle2()
