@@ -1,20 +1,15 @@
 //string
 
-const str1 = 'cat and dog';
+const str1 = 'Cat aNd doG'; //user
+const str2 = 'cat and dog'; //db
 console.log(str1);
-console.log(str1.length);
 
-console.log(str1.includes('and'));
+const str1UpperCase = str1.toUpperCase();
 
-const firstLetter = str1.charAt(0);
-console.log(firstLetter);
+console.log(str1UpperCase);
 
-const firstLetterCode = str1.charCodeAt(0);
-console.log(firstLetterCode);
-
-const lastLetter = str1.at(-1);
-console.log(lastLetter);
-
-console.log(str1.indexOf('cat'));
-console.log(str1.lastIndexOf('cat'));
-
+if(str1.toLowerCase() === str2){
+  console.log('equal');
+}else{
+  console.log('not equal');
+}
