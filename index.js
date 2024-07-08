@@ -1,28 +1,19 @@
-//string
+//reverse, sort
+const number = 9546;
+// const numToStr = String(number);
+// const arrStr = numToStr.split('');
+// const arrNums = arrStr.map((elem) => Number(elem));
+// const summa = arrNums.reduce((accumulator, elem) => accumulator + elem);
+// console.log(summa);
 
-const fileName = 'title.qwerty.exe';
+const result = String(number)
+  .split('')
+  // .map((elem) => Number(elem))
+  .reduce((accumulator, elem) => Number(accumulator) + Number(elem));
+console.log(result);
 
-const posLastDote = fileName.trim().lastIndexOf('.');
-const format = fileName.trim().slice(posLastDote + 1);
+const minDigit = Number(String(number).split('').sort().at(0));
+const maxDigit = Number(String(number).split('').sort().at(-1));
 
-switch (format) {
-  case 'txt':
-  case 'doc':
-    console.log('текст');
-    break;
-  case 'jpg':
-  case 'png':
-    console.log('зображення');
-    break;
-  case 'exe':
-    console.log('інсталяшка');
-    break;
-  case 'html':
-  case 'css':
-  case 'js':
-    console.log('веб');
-    break;
-  default:
-    console.log('невідомий формат');
-    break;
-}
+console.log(minDigit);
+console.log(maxDigit);
