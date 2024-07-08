@@ -1,19 +1,15 @@
 //reverse, sort
-const number = 9546;
-// const numToStr = String(number);
-// const arrStr = numToStr.split('');
-// const arrNums = arrStr.map((elem) => Number(elem));
-// const summa = arrNums.reduce((accumulator, elem) => accumulator + elem);
-// console.log(summa);
 
-const result = String(number)
-  .split('')
-  // .map((elem) => Number(elem))
-  .reduce((accumulator, elem) => Number(accumulator) + Number(elem));
-console.log(result);
+const numbers = [5, 172, 1, 10, 4, 2, 101, 22];
 
-const minDigit = Number(String(number).split('').sort().at(0));
-const maxDigit = Number(String(number).split('').sort().at(-1));
+console.log(numbers);
+// метод sort ЗМІНЮЄ!!! поточний масив
+console.log(numbers.sort((a, b) => a - b)); //0  1  -1
+console.log(numbers);
 
-console.log(minDigit);
-console.log(maxDigit);
+// console.log(numbers.sort((a, b) => b - a));
+// console.log(numbers);
+
+// метод reverse ЗМІНЮЄ!!! поточний масив
+console.log(numbers.reverse());
+console.log(numbers);
