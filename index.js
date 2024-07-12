@@ -1,41 +1,52 @@
 // Map  Set
 
-function summa(...agrs){
-  return args.reduce((sum, elem)=>sum+elem, 0)
-}
+const set = new Set();
+set.add(7);
+set.add(7);
+set.add('7');
+set.add(3 + 4);
 
-const map = new Map();
-map.set('word', ()=>{console.log('hi!');});
-map.set(summa, 22);
-map.set(20, null);
-map.set(summa, 3333);
+console.log(set);
 
-// map.delete(summa)
+const numbers = [1, 2, 3, 1, 5, 4, 2, 3, 1, 7];
+const uniqSetNumbers = new Set(numbers);
+const uniqNumbers = [...uniqSetNumbers];
+console.log(uniqNumbers);
 
-//  console.log(...map);
-// console.log(map.size);
-// console.log(map.get(summa));
-// console.log(map.has(summa));
+const string = 'SyntaxError: Unexpected token const Unexpected token';
+const word = 'subscribe';
+console.log(new Set(word));
+console.log(new Set(string.toLowerCase()))
+console.log(new Set(string.split(' ')))
 
-// map.forEach((value, key)=>console.log(value, key))
+const dictionary = new Map();
+dictionary.set('copy', 'копіювати');
+dictionary.set('subscribe', 'підписатися');
+dictionary.set('send', 'відправити');
+dictionary.set('share', 'поділитися');
+dictionary.set('add to cart', 'додати в корзину');
+dictionary.set('zoom', 'збільшити');
+dictionary.set('play', 'грати');
 
-console.log(...map.keys());
-console.log(...map.values());
+// const word = prompt('enter any word');
+// if (dictionary.has(word)) {
+//   console.log(dictionary.get(word));
+// } else {
+//   console.log(word);
+// }
 
+// const lang = prompt('1 - en, 2 - uk');
 
-
-const test = {
-  props1: 45,
-  Title: 'title object',
-  555:1000,
-  age: 33,
-  1:'01'
-}
-// console.log(test);
-for (const key in test) {
-  // console.log(key, test[key]);
-}
-
-const array = [15,25,35];
-// console.log(...array);
-// array.forEach((elem)=>console.log(elem))
+// switch (lang) {
+//   case '1':
+//   case 'en':
+//     // console.log(...dictionary.keys());
+//     dictionary.keys().forEach((key)=>console.log(key))
+//     break;
+//   case '2':
+//   case 'uk':
+//     dictionary.values().forEach((value)=>console.log(value));
+//     break;
+//   default:
+//     break;
+// }
