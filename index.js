@@ -1,52 +1,40 @@
 // Map  Set
+// треба створити носу структуру, яка буде збурігати пари ключ-значення
+// ключем буде ім'я студента
+// значенням буде масив оцінок студента
+// написати функції
+// додає нового студента і порожній масив оцінок
+// додає студенту нову оцінку
 
-const set = new Set();
-set.add(7);
-set.add(7);
-set.add('7');
-set.add(3 + 4);
+const studensWithGrade = new Map();
+function addNewStudent(dictionary, studentName) {
+  dictionary.set(studentName, []);
+}
 
-console.log(set);
+function addStudentNewGrade(dictionary, studentName, grade) {
+  if (dictionary.has(studentName)) {
+    const grades = dictionary.get(studentName);
+    grades.push(grade)
+    dictionary.set(studentName, grades);
+  } else {
+    dictionary.set(studentName, [grade]);
+  }
+}
 
-const numbers = [1, 2, 3, 1, 5, 4, 2, 3, 1, 7];
-const uniqSetNumbers = new Set(numbers);
-const uniqNumbers = [...uniqSetNumbers];
-console.log(uniqNumbers);
+function getAverageGradeStudent(dictionary, studentName){
+  if(dictionary.has(studentName)){
+    const grades = dictionary.get(studentName);
+    const summaGrades = grades.reduce((sum, grade)=> sum+grade);
+    return summaGrades/grades.length;
+  }
+}
 
-const string = 'SyntaxError: Unexpected token const Unexpected token';
-const word = 'subscribe';
-console.log(new Set(word));
-console.log(new Set(string.toLowerCase()))
-console.log(new Set(string.split(' ')))
-
-const dictionary = new Map();
-dictionary.set('copy', 'копіювати');
-dictionary.set('subscribe', 'підписатися');
-dictionary.set('send', 'відправити');
-dictionary.set('share', 'поділитися');
-dictionary.set('add to cart', 'додати в корзину');
-dictionary.set('zoom', 'збільшити');
-dictionary.set('play', 'грати');
-
-// const word = prompt('enter any word');
-// if (dictionary.has(word)) {
-//   console.log(dictionary.get(word));
-// } else {
-//   console.log(word);
-// }
-
-// const lang = prompt('1 - en, 2 - uk');
-
-// switch (lang) {
-//   case '1':
-//   case 'en':
-//     // console.log(...dictionary.keys());
-//     dictionary.keys().forEach((key)=>console.log(key))
-//     break;
-//   case '2':
-//   case 'uk':
-//     dictionary.values().forEach((value)=>console.log(value));
-//     break;
-//   default:
-//     break;
-// }
+addNewStudent(studensWithGrade, 'Alex');
+addStudentNewGrade(studensWithGrade, 'Brad', 12);
+addStudentNewGrade(studensWithGrade, 'Brad', 8);
+addStudentNewGrade(studensWithGrade, 'Brad', 11);
+addNewStudent(studensWithGrade, 'Anna')
+addStudentNewGrade(studensWithGrade, 'Anna', 9);
+addStudentNewGrade(studensWithGrade,'Bob',7)
+console.log(getAverageGradeStudent(studensWithGrade, 'Brad').toFixed(2))
+console.log(studensWithGrade);
