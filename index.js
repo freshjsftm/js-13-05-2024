@@ -1,16 +1,41 @@
-// ...  rest   spred
+// Map  Set
 
-// rest - збирає окремі параметри (для яких не має власного імені) в один масив
-// використовуємо для створення чогось нового
-// повинен бути в кінці списка параметрів
-function summa( ...args) {
-  console.log(args); //args - array
-  return args.reduce((accumulator, elem) => accumulator + elem, 0);
+function summa(...agrs){
+  return args.reduce((sum, elem)=>sum+elem, 0)
 }
-console.log(summa(1,4,3));
 
-const numbers = [1, 5, 9, 3, 1];
+const map = new Map();
+map.set('word', ()=>{console.log('hi!');});
+map.set(summa, 22);
+map.set(20, null);
+map.set(summa, 3333);
 
-// spred - розбирає масив на окремі елементи
-// застосовуємо для чогось існуючого
-console.log(summa(...numbers));
+// map.delete(summa)
+
+//  console.log(...map);
+// console.log(map.size);
+// console.log(map.get(summa));
+// console.log(map.has(summa));
+
+// map.forEach((value, key)=>console.log(value, key))
+
+console.log(...map.keys());
+console.log(...map.values());
+
+
+
+const test = {
+  props1: 45,
+  Title: 'title object',
+  555:1000,
+  age: 33,
+  1:'01'
+}
+// console.log(test);
+for (const key in test) {
+  // console.log(key, test[key]);
+}
+
+const array = [15,25,35];
+// console.log(...array);
+// array.forEach((elem)=>console.log(elem))
