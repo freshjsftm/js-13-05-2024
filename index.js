@@ -1,36 +1,25 @@
-class Square {
-  //private - можна користуватися лише в межах класу
-  #side;
-  constructor(side) {
-    // викликаємо setter
-    this.side = side;
+class User {
+  #login;
+  constructor(login) {
+    this.login = login;
   }
-  // setter - встановити значення властивісті
-  set side(value) {
-    //number >0
-    if (typeof value !== 'number') {
-      throw new TypeError('type must be number!');
+  set login(value) {
+    if (typeof value !== 'string') {
+      throw new TypeError('type must be string');
     }
-    if (value <= 0) {
-      throw new RangeError('value mast be positive');
+    if (value.trim().length < 3 || value.trim().length > 15) {
+      throw new RangeError('length 3..15');
     }
-    this.#side = value;
+    this.#login = value;
   }
-  // getter - отримати значення властивості
-  get side() {
-    return this.#side;
-  }
-  getArea() {
-    return this.#side ** 2;
+  get login() {
+    return this.#login;
   }
 }
-
-
-///////////////////////////////
-const square = new Square(7);
-// викликаємо setter
-square.side = 3;
-// викликаємо getter
-console.log(square.side);
-// square.side = '!!!!';
-console.log(square.getArea());
+try {
+  const user = new User('Anna');
+  console.log(user);
+} catch (error) {
+  console.error(error);
+}
+console.log('code');
